@@ -1,6 +1,6 @@
-## Integration Tester Maven Plugin
+# Integration Tester Maven Plugin
 This plugin enables you to execute Integration Tester assests as part of your Maven build.
-# Samples
+### Samples
 To run these samples you need to:
 1. Install Maven 3.2+
 2. Install either Integration Tester v9.1.1.1+ or Integration Tester Agent v9.1.1.1+
