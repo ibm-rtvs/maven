@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1511962066024" createdUser="ram" id="-1738b49a:16007e94b9e:-78bd" type="test_resource" updatedTimestamp="1511962092512" updatedUser="ram" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="-1738b49a:16007e94b9e:-78bb" selfDescribing="Publish a message and wait for a response to be received.  This can then be validated accordingly." type="send_request_action" version="1.1">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" formatter="HTTP_Message" name="&quot;Text&quot; on resource &quot;/RTCP/examples/phonebook/api/?title={title}&amp;firstname={firstname}&amp;lastname={lastname}&quot; using schema &quot;Text&quot; via &quot;HTTP&quot;" transport="-1ec90187:15b3d839d3a:-7e69:-244475263:408339756">
+               <headerMessage meTy="Message" type="12" version="1.2">
+                  <fieldActionGroup>
+                     <fieldAction enabled="false" type="1">
+                        <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                     </fieldAction>
+                  </fieldActionGroup>
+                  <_c meTy="String" name="MessageType" type="7" value="http.text.message.type" version="1.2">
+                     <fieldActionGroup>
+                        <fieldAction type="0">
+                           <fieldAction exp="http.text.message.type" type="0"/>
+                        </fieldAction>
+                     </fieldActionGroup>
+                  </_c>
+                  <_c meTy="String" name="Method" type="7" value="GET" version="1.2">
+                     <fieldActionGroup>
+                        <fieldAction type="0">
+                           <fieldAction exp="GET" type="0"/>
+                        </fieldAction>
+                     </fieldActionGroup>
+                  </_c>
+                  <_c meTy="String" name="URL" type="7" value="" version="1.2">
+                     <fieldActionGroup>
+                        <fieldAction type="0">
+                           <fieldAction exp="/RTCP/examples/phonebook/api/?title={title}&amp;firstname={firstname}&amp;lastname={lastname}" type="0"/>
+                        </fieldAction>
+                     </fieldActionGroup>
+                  </_c>
+                  <_c meTy="Message" name="httpDetails" type="12" version="1.2">
+                     <fieldActionGroup>
+                        <fieldAction enabled="false" type="1">
+                           <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                        </fieldAction>
+                     </fieldActionGroup>
+                     <_c meTy="String" name="Version" type="7" value="" version="1.2">
+                        <fieldActionGroup>
+                           <fieldAction type="0">
+                              <fieldAction type="0"/>
+                           </fieldAction>
+                        </fieldActionGroup>
+                     </_c>
+                     <_c meTy="Message" name="httpHeaders" type="12" version="1.2">
+                        <fieldActionGroup>
+                           <fieldAction enabled="false" type="1">
+                              <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                           </fieldAction>
+                        </fieldActionGroup>
+                        <_c meTy="String" name="Accept" type="7" value="application/json" version="1.2">
+                           <fieldActionGroup>
+                              <fieldAction type="0">
+                                 <fieldAction exp="application/json" type="0"/>
+                              </fieldAction>
+                           </fieldActionGroup>
+                        </_c>
+                     </_c>
+                     <_c meTy="Boolean" name="followRedirects" type="8" value="true" version="1.2">
+                        <fieldActionGroup>
+                           <fieldAction type="0">
+                              <fieldAction exp="true" type="0"/>
+                           </fieldAction>
+                        </fieldActionGroup>
+                     </_c>
+                  </_c>
+               </headerMessage>
+               <bodyMessage assocdefid="Text" name="Text" sch="Text" type="12" version="1.2">
+                  <fieldActionGroup>
+                     <fieldAction enabled="false" type="1">
+                        <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                     </fieldAction>
+                  </fieldActionGroup>
+                  <_c coreTypeInt="7" coreTypeName="String" name="text" nodeFormatter="rest_nodeformatter" sch="Text" type="12" version="1.2">
+                     <fieldExpander fieldExpanderID="rest_fieldexpander" fieldSchema="-1ec90187:15b3d839d3a:-7e69:-1028583081:-332410441" fieldSchemaRoot="queryPhonebook"/>
+                     <fieldActionGroup>
+                        <fieldAction type="0">
+                           <fieldAction type="4"/>
+                        </fieldAction>
+                        <fieldAction enabled="false" type="1">
+                           <fieldAction enabled="false" type="7"/>
+                        </fieldAction>
+                     </fieldActionGroup>
+                     <_c assocdefid="queryPhonebook" name="queryPhonebook" sch="-1ec90187:15b3d839d3a:-7e69:-1028583081:-332410441" type="12" version="1.2">
+                        <fieldActionGroup>
+                           <fieldAction enabled="false" type="1">
+                              <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                           </fieldAction>
+                        </fieldActionGroup>
+                        <_c name="body" sch="-1ec90187:15b3d839d3a:-7e69:-1028583081:-332410441" type="12" version="1.2">
+                           <fieldActionGroup>
+                              <fieldAction enabled="false" type="1">
+                                 <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                              </fieldAction>
+                           </fieldActionGroup>
+                           <_c name="text" sch="-1ec90187:15b3d839d3a:-7e69:-1028583081:-332410441" type="7" version="1.2">
+                              <fieldActionGroup>
+                                 <fieldAction type="0">
+                                    <fieldAction type="0"/>
+                                 </fieldAction>
+                              </fieldActionGroup>
+                           </_c>
+                        </_c>
+                     </_c>
+                  </_c>
+               </bodyMessage>
+            </resourceConfig>
+         </editableResource>
+         <editableResource id="-1738b49a:16007e94b9e:-78b7" selfDescribing="Receive and validate a response to the request you have sent." type="receive_reply_action" version="1.1">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" formatter="HTTP_Message" name="&quot;Text&quot; using schema &quot;Text&quot;" sendRequestID="-1738b49a:16007e94b9e:-78bb" transport="-1ec90187:15b3d839d3a:-7e69:-244475263:408339756">
+               <headerMessage type="12" version="1.2">
+                  <fieldActionGroup>
+                     <fieldAction enabled="false" type="1">
+                        <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                     </fieldAction>
+                  </fieldActionGroup>
+                  <_c name="httpDetails" type="12" version="1.2">
+                     <fieldActionGroup>
+                        <fieldAction enabled="false" type="1">
+                           <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                        </fieldAction>
+                     </fieldActionGroup>
+                     <_c name="httpHeaders" type="12" version="1.2">
+                        <fieldActionGroup>
+                           <fieldAction enabled="false" type="1">
+                              <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                           </fieldAction>
+                        </fieldActionGroup>
+                     </_c>
+                  </_c>
+               </headerMessage>
+               <subconfig MessageType="http.text.message.type" URL="" _version="1.1" allowSubPath="false" consumerType="Participate" filterHeaders="false" filterMethod="false" filterResourcePath="false" formatter="HTTP_Message" transport="-1ec90187:15b3d839d3a:-7e69:-244475263:408339756"/>
+               <bodyMessage assocdefid="Text" name="Text" sch="Text" type="12" version="1.2">
+                  <fieldActionGroup>
+                     <fieldAction type="1">
+                        <fieldAction anyOrder="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                     </fieldAction>
+                  </fieldActionGroup>
+                  <_c coreTypeInt="7" coreTypeName="String" name="text" nodeFormatter="JSON.nodeformatter" sch="Text" type="12" version="1.2">
+                     <fieldExpander fieldExpanderID="JSON.fieldexpander" fieldSchema="-1ec90187:15b3d839d3a:-7e69:-1028583081:-1551637993" fieldSchemaRoot="queryPhonebook_200[Object]"/>
+                     <contentTree>{"entries":[{"id":1,"title":"Mr","firstName":"Fred","lastName":"Jones","phoneNumber":"01962 000000"},{"id":2,"title":"Mrs","firstName":"Jane","lastName":"Doe","phoneNumber":"01962 000001"}]}<defaultActions>
+                           <defaultMessageActions>
+                              <fieldActionGroup>
+                                 <fieldAction type="1">
+                                    <fieldAction anyOrder="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                                 </fieldAction>
+                                 <fieldAction type="1">
+                                    <fieldAction type="5"/>
+                                 </fieldAction>
+                                 <fieldAction type="1">
+                                    <fieldAction type="6" typeActionAllType="true" typeActionMetaType="false"/>
+                                 </fieldAction>
+                              </fieldActionGroup>
+                           </defaultMessageActions>
+                           <defaultScalarActions>
+                              <fieldActionGroup>
+                                 <fieldAction type="1">
+                                    <fieldAction type="0"/>
+                                 </fieldAction>
+                                 <fieldAction type="1">
+                                    <fieldAction type="5"/>
+                                 </fieldAction>
+                                 <fieldAction type="1">
+                                    <fieldAction type="6" typeActionAllType="true" typeActionMetaType="false"/>
+                                 </fieldAction>
+                              </fieldActionGroup>
+                           </defaultScalarActions>
+                        </defaultActions>
+                        <updates>
+                           <updateField path="/text/Object">
+                              <_c assocdefid="queryPhonebook_200[Object]"/>
+                           </updateField>
+                           <updateField path="/text/Object/entries">
+                              <_c assocdefid="http://localhost:7819/RTCP/examples/phonebook/api/swagger.json#/definitions/PhonebookEntries/properties/entries[Array]" type="12"/>
+                           </updateField>
+                           <updateField path="/text/Object/entries/0">
+                              <_c name="0"/>
+                           </updateField>
+                           <updateField path="/text/Object/entries/0/id">
+                              <_c value="1"/>
+                           </updateField>
+                           <updateField path="/text/Object/entries/0/title">
+                              <_c value="Mr"/>
+                           </updateField>
+                           <updateField path="/text/Object/entries/0/firstName">
+                              <_c value="Fred"/>
+                           </updateField>
+                           <updateField path="/text/Object/entries/0/lastName">
+                              <_c value="Jones"/>
+                           </updateField>
+                           <updateField path="/text/Object/entries/0/phoneNumber">
+                              <_c value="01962 000000"/>
+                           </updateField>
+                           <updateField path="/text/Object/entries/1">
+                              <_c name="1"/>
+                           </updateField>
+                           <updateField path="/text/Object/entries/1/id">
+                              <_c value="2"/>
+                           </updateField>
+                           <updateField path="/text/Object/entries/1/title">
+                              <_c value="Mrs"/>
+                           </updateField>
+                           <updateField path="/text/Object/entries/1/firstName">
+                              <_c value="Jane"/>
+                           </updateField>
+                           <updateField path="/text/Object/entries/1/lastName">
+                              <_c value="Doe"/>
+                           </updateField>
+                           <updateField path="/text/Object/entries/1/phoneNumber">
+                              <_c value="01962 000001"/>
+                           </updateField>
+                        </updates>
+                     </contentTree>
+                     <fieldActionGroup>
+                        <fieldAction type="1">
+                           <fieldAction type="7"/>
+                        </fieldAction>
+                     </fieldActionGroup>
+                  </_c>
+               </bodyMessage>
+            </resourceConfig>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE"/>
+      <testprops messageClearance="false"/>
+   </resourceConfig>
+</editableResource>

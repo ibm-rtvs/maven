@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1511962049658" createdUser="ram" id="-1738b49a:16007e94b9e:-7965" type="stub_resource" updatedTimestamp="1512056210754" updatedUser="ram" version="1.1">
+   <loggingConfiguration debug="true" writeStubEventsToDB="true"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="-1738b49a:16007e94b9e:-7963" selfDescribing="Configure a subscriber to pick up a message that can be passed to the child Case Actions" type="message_switch_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" formatter="HTTP_Message" name="on resource &quot;/RTCP/examples/phonebook/api/&quot; via &quot;HTTP&quot;" src="-1ec90187:15b3d839d3a:-7e69:-1131447953:-807255066" transport="-1ec90187:15b3d839d3a:-7e69:-244475263:408339756">
+               <settings MessageType="http.text.message.type" Method="GET" URL="/RTCP/examples/phonebook/api/" _version="1.1" allowSubPath="false" consumerType="Participate" filterHeaders="true" filterMethod="true" filterResourcePath="true">
+            <filterHeadersList>
+               <header disabled="true" name="Accept" type="7" value="application/json"/>
+                  </filterHeadersList>
+               </settings>
+               <passThrough behaviour="SIMULATE_ERROR" componentId="-1ec90187:15b3d839d3a:-7e69:-1131447953:-807255066" componentType="OPERATION" templateType="http_transport">
+                  <SIMULATE_ERROR delayPeriod="0" errorCode="503" statusText="Unavailable"/>
+               </passThrough>
+               <cases>
+                  <editableResource id="-1738b49a:16007e94b9e:-795d" selfDescribing="Configure the filtering and validation for this Case action" type="message_case_action" version="1.0">
+                     <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                     <resourceConfig description="" name="&quot;Text&quot; using schema &quot;Text&quot;">
+                        <FilterExpressions option="NOTHING" type="script:ECMAScript"/>
+                        <bodyfilters assocdefid="Text" name="Text" sch="Text" type="12" version="1.2">
+                           <fieldActionGroup>
+                              <fieldAction enabled="false" type="1">
+                                 <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                              </fieldAction>
+                           </fieldActionGroup>
+                           <_c coreTypeInt="7" coreTypeName="String" name="text" nodeFormatter="rest_nodeformatter" sch="Text" type="12" version="1.2">
+                              <fieldExpander fieldExpanderID="rest_fieldexpander" fieldSchema="-1ec90187:15b3d839d3a:-7e69:-1028583081:-332410441" fieldSchemaRoot="queryPhonebook"/>
+                              <fieldActionGroup>
+                                 <fieldAction enabled="false" type="1">
+                                    <fieldAction enabled="false" type="7"/>
+                                 </fieldAction>
+                              </fieldActionGroup>
+                              <_c assocdefid="queryPhonebook" name="queryPhonebook" sch="-1ec90187:15b3d839d3a:-7e69:-1028583081:-332410441" type="12" version="1.2">
+                                 <fieldActionGroup>
+                                    <fieldAction enabled="false" type="1">
+                                       <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                                    </fieldAction>
+                                 </fieldActionGroup>
+                                 <_c name="body" sch="-1ec90187:15b3d839d3a:-7e69:-1028583081:-332410441" type="12" version="1.2">
+                                    <fieldActionGroup>
+                                       <fieldAction enabled="false" type="1">
+                                          <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                                       </fieldAction>
+                                    </fieldActionGroup>
+                                    <_c name="text" sch="-1ec90187:15b3d839d3a:-7e69:-1028583081:-332410441" type="7" version="1.2"/>
+                                 </_c>
+                              </_c>
+                           </_c>
+                        </bodyfilters>
+                        <headerfilters assocdefid="Http Subscribe" meTy="Message" name="" sch="Http Subscribe" type="12" version="1.2">
+                           <fieldActionGroup>
+                              <fieldAction enabled="false" type="1">
+                                 <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                              </fieldAction>
+                           </fieldActionGroup>
+                           <_c meTy="String" name="Method" sch="Http Subscribe" type="7" version="1.2"/>
+                           <_c meTy="String" name="URL" sch="Http Subscribe" type="7" version="1.2"/>
+                           <_c meTy="Message" name="httpDetails" sch="Http Subscribe" type="12" version="1.2">
+                              <fieldActionGroup>
+                                 <fieldAction enabled="false" type="1">
+                                    <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                                 </fieldAction>
+                              </fieldActionGroup>
+                              <_c meTy="String" name="Version" sch="Http Subscribe" type="7" version="1.2"/>
+                              <_c meTy="Message" name="httpHeaders" sch="Http Subscribe" type="12" version="1.2">
+                                 <fieldActionGroup>
+                                    <fieldAction enabled="false" type="1">
+                                       <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                                    </fieldAction>
+                                 </fieldActionGroup>
+                              </_c>
+                           </_c>
+                           <_c meTy="String" name="MessageType" sch="Http Subscribe" type="7" version="1.2"/>
+                           <_c meTy="Date-Time" name="rcvdTimestamp" sch="Http Subscribe" type="11" version="1.2"/>
+                        </headerfilters>
+                        <childActions>
+                           <editableResource id="-1738b49a:16007e94b9e:-795c" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
+                              <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                              <resourceConfig description="" formatter="HTTP_Message" name="&quot;Text&quot; using schema &quot;Text&quot; (2)" receiverequestid="-1738b49a:16007e94b9e:-7963" src="-1738b49a:16007e94b9e:-7963">
+                                 <replyHeaderMessage type="12" version="1.2">
+                                    <fieldActionGroup>
+                                       <fieldAction enabled="false" type="1">
+                                          <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                                       </fieldAction>
+                                    </fieldActionGroup>
+                                    <_c name="MessageType" type="7" value="http.text.message.type" version="1.2">
+                                       <fieldActionGroup>
+                                          <fieldAction type="0">
+                                             <fieldAction exp="http.text.message.type" type="0"/>
+                                          </fieldAction>
+                                       </fieldActionGroup>
+                                    </_c>
+                                    <_c name="httpDetails" type="12" version="1.2">
+                                       <fieldActionGroup>
+                                          <fieldAction enabled="false" type="1">
+                                             <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                                          </fieldAction>
+                                       </fieldActionGroup>
+                                       <_c name="httpHeaders" type="12" version="1.2">
+                                          <fieldActionGroup>
+                                             <fieldAction enabled="false" type="1">
+                                                <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                                             </fieldAction>
+                                          </fieldActionGroup>
+                                          <_c meTy="String" name="X-Stub" type="7" value="true" version="1.2">
+                                             <fieldActionGroup>
+                                                <fieldAction type="0">
+                                                   <fieldAction exp="true" type="0"/>
+                                                </fieldAction>
+                                             </fieldActionGroup>
+                                          </_c>
+                                       </_c>
+                                       <_c meTy="String" name="Version" type="7" value="1.0" version="1.2">
+                                          <fieldActionGroup>
+                                             <fieldAction type="0">
+                                                <fieldAction exp="1.0" type="0"/>
+                                             </fieldAction>
+                                          </fieldActionGroup>
+                                       </_c>
+                                    </_c>
+                                    <_c meTy="String" name="StatusCode" type="7" value="200" version="1.2">
+                                       <fieldActionGroup>
+                                          <fieldAction type="0">
+                                             <fieldAction exp="200" type="0"/>
+                                          </fieldAction>
+                                       </fieldActionGroup>
+                                    </_c>
+                                    <_c meTy="String" name="ReasonPhrase" type="7" value="OK" version="1.2">
+                                       <fieldActionGroup>
+                                          <fieldAction type="0">
+                                             <fieldAction exp="OK" type="0"/>
+                                          </fieldAction>
+                                       </fieldActionGroup>
+                                    </_c>
+                                 </replyHeaderMessage>
+                                 <replyMessage assocdefid="Text" name="Text" sch="Text" type="12" version="1.2">
+                                    <fieldActionGroup>
+                                       <fieldAction enabled="false" type="1">
+                                          <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                                       </fieldAction>
+                                    </fieldActionGroup>
+                                    <_c coreTypeInt="7" coreTypeName="String" name="text" nodeFormatter="JSON.nodeformatter" sch="Text" type="12" version="1.2">
+                                       <fieldExpander fieldExpanderID="JSON.fieldexpander" fieldSchema="-1ec90187:15b3d839d3a:-7e69:-1028583081:-1551637993" fieldSchemaRoot="queryPhonebook_200[Object]"/>
+                                       <contentTree>{}<defaultActions>
+                                             <defaultMessageActions>
+                                                <fieldActionGroup>
+                                                   <fieldAction enabled="false" type="1">
+                                                      <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                                                   </fieldAction>
+                                                   <fieldAction type="0">
+                                                      <fieldAction type="100"/>
+                                                   </fieldAction>
+                                                   <fieldAction enabled="false" type="1">
+                                                      <fieldAction enabled="false" type="5"/>
+                                                   </fieldAction>
+                                                   <fieldAction enabled="false" type="1">
+                                                      <fieldAction enabled="false" type="6" typeActionAllType="true" typeActionMetaType="false"/>
+                                                   </fieldAction>
+                                                </fieldActionGroup>
+                                             </defaultMessageActions>
+                                             <defaultScalarActions>
+                                                <fieldActionGroup>
+                                                   <fieldAction enabled="false" type="1">
+                                                      <fieldAction enabled="false" type="0"/>
+                                                   </fieldAction>
+                                                   <fieldAction type="0">
+                                                      <fieldAction type="0"/>
+                                                   </fieldAction>
+                                                   <fieldAction enabled="false" type="1">
+                                                      <fieldAction enabled="false" type="5"/>
+                                                   </fieldAction>
+                                                   <fieldAction enabled="false" type="1">
+                                                      <fieldAction enabled="false" type="6" typeActionAllType="true" typeActionMetaType="false"/>
+                                                   </fieldAction>
+                                                </fieldActionGroup>
+                                             </defaultScalarActions>
+                                          </defaultActions>
+                                          <updates>
+                                             <updateField path="/text/Object">
+                                                <_c assocdefid="queryPhonebook_200[Object]"/>
+                                             </updateField>
+                                          </updates>
+                                       </contentTree>
+                                       <fieldActionGroup>
+                                          <fieldAction type="0">
+                                             <fieldAction type="4"/>
+                                          </fieldAction>
+                                          <fieldAction enabled="false" type="1">
+                                             <fieldAction enabled="false" type="7"/>
+                                          </fieldAction>
+                                       </fieldActionGroup>
+                                    </_c>
+                                 </replyMessage>
+                              </resourceConfig>
+                           </editableResource>
+                        </childActions>
+                     </resourceConfig>
+                  </editableResource>
+                  <editableResource id="-1738b49a:16007e94b9e:-7962" type="default_case_action" version="1.0">
+                     <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                     <resourceConfig description="" name=" (2)"/>
+                  </editableResource>
+               </cases>
+            </resourceConfig>
+         </editableResource>
+      </testTree>
+      <tagDataStore identifier="-17e8303d:1600d4b0ae0:-7907" inputMode="NONE" outputMode="NONE"/>
+      <testprops messageClearance="false"/>
+      <stubprops behaviourStyle="ONE_TO_ONE" majorVersion="1" messageClearance="false" minorVersion="0" optimise="false" wrks="10">
+         <responseTimeTable>
+            <entry key="-1ec90187:15b3d839d3a:-7e69:-1131447953:-807255066">
+               <value type="NO_DELAY"/>
+            </entry>
+         </responseTimeTable>
+         <environmentTasks preventExecutionOnFailure="false"/>
+      </stubprops>
+      <Session mode="NONE"/>
+   </resourceConfig>
+</editableResource>

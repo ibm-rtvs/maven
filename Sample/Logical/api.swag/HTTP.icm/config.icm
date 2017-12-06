@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1491386152379" createdUser="ram" id="-1ec90187:15b3d839d3a:-7e69:-244475263:408339756" type="infrastructure_component_resource" updatedTimestamp="1491386152379" updatedUser="ram" version="1.1">
+   <syncdetails compare="LOGICALHTTPlocalhost:7819" lastSynced="1491386152379" sourceid="-1ec90187:15b3d839d3a:-7e69">
+      <sourcepath path="HTTP"/>
+   </syncdetails>
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig infrastructureType="http_transport">
+      <recordingSettings colour="0,180,160"/>
+   </resourceConfig>
+</editableResource>

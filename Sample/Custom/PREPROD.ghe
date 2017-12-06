@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1491385688061" createdUser="ram" id="-1ec90187:15b3d839d3a:-7fa3" type="environment_resource" updatedTimestamp="1511869983569" updatedUser="ram" version="1.0">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig>
+      <evbindings>
+         <evbinding evLogicalItemId="-1ec90187:15b3d839d3a:-7e69:-244475263:408339756" evPhysicalItemId="690dc466:15e3c75f094:-7f07"/>
+      </evbindings>
+   </resourceConfig>
+</editableResource>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1504253664740" createdUser="ram" id="690dc466:15e3c75f094:-7f07" selfDescribing="https localhost:5443 " type="http_transport" updatedTimestamp="1512056141708" updatedUser="ram" version="1.0">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig transportName="" transportTemplateName="HTTP">
+      <messageProperties ReasonPhrase="No Stub available that matches the request" clientConnectionsPerHost="100" credDomain="" credPassword="#com.ghc.1!1b4f" credType="0" credUser="" httpHost="localhost" httpNtlmDomain="" httpPort="5443" httpProxyHost="" httpProxyPassword="#com.ghc.1!160e" httpProxyPort="" httpProxyUsername="" httpResourceRoot="" httpServerSocketBindAddressOverride="localhost" httpServerSocketPortOverride="5444" httpSocketTimeout="" httpTimeoutResponseCode="503" httpVirtualHost="" recType="PROXY" useSsl="true" version="4">
+         <kerberos Anon="false" Conf="false" Custom="true" Enabled="false" Integ="false" KDC="" Loc="" MutAuth="false" Principal="" Pwd="#com.ghc.1!7250" Realm="" RepDet="false" SSO="false" SeqCheck="false"/>
+         <serverAuthentication>
+            <authenticationConfig enabled="false" realm="" type="1"/>
+            <authenticationConfig algorithm="" authParams="" domain="" enabled="false" nonce="false" opaque="" qop="" realm="" stale="" type="2"/>
+            <authenticationConfig enabled="false" type="3"/>
+            <authenticationConfig enabled="false" type="5"/>
+         </serverAuthentication>
+      </messageProperties>
+   </resourceConfig>
+</editableResource>

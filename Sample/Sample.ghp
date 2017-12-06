@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><_c buildID="I20170306_1448" certificateAuthority="KEY_1024_BITS" comments="Project created on April 5, 2017" creationVersion="9.1.0" domain="domain1" extDocPrefix="" name="Getting Started 1" nff="true" owner="N_A" uuid="0000015b-3d83-9b1e-0000-04c9828bd87b">
+   <dateTimeConfig date="yyyy/MM/dd" dateTime="dd-MMM-yyyy HH:mm:ss" time="HH:mm:ss.SSS"/>
+   <serverSettings ghRepositoryURL="https://localhost:5443/RTCP/" trustSource="TRUST_ALL" trustStorePath="">
+      <dbConnectionParameters maxConnections="5" poolName="DefaultPoolName">
+         <connectionParams CICSEnv="false" MVSEnv="false" ZOSEnv="false" driverClass="" password="#com.ghc.1!46e6" recordFilters="" url="" user="">
+            <stubSettings maxProcCallCount="10000" maxResultSetRowCount="10000" maxRowCount="10000" password="#com.ghc.1!7090" procedureLearningBehaviour="1" schema="" url="" useIntegratedDB="true" user=""/>
+            <storedProcedureFilter catalogFilterEnabled="false" catalogFilterPattern="" procedureFilterEnabled="false" procedureFilterPattern="" schemaFilterEnabled="true" schemaFilterPattern="" storedProceduresRetrievalEnabled="false" useConnectionUsername="true"/>
+            <timestampFormatting timestampFormatZero="false" timestampFormattingEnabled="false" timestampPrecision="9"/>
+         </connectionParams>
+      </dbConnectionParameters>
+   </serverSettings>
+   <permissionsSettings autoLogin="true" host="IBM485-R8HDH4M" permFactId="ldap.permissions.factory.none" port="389" pswd="2jmj7l5rSw0yVb/vlWAYkK/YBwk="/>
+</_c>
