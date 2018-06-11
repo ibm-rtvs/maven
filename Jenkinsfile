@@ -3,7 +3,6 @@ pipeline {
   stages {
     stage('Run Tests') {
       steps {
-        sh 'set'
         sh 'cp -f $JAVA_HOME/jre/lib/security/cacerts $WORKSPACE/my-cacerts'
         sh 'openssl s_client -connect $CONTROL_PANEL_TCP </dev/null | sed -ne "/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p" > my-rtcp.crt'
         sh '$JAVA_HOME/jre/bin/keytool -import -noprompt -alias rtcp -file my-rtcp.crt -keystore $WORKSPACE/my-cacerts -storepass changeit'
